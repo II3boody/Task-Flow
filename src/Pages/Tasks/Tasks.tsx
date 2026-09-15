@@ -18,7 +18,7 @@ export default function Tasks({ tasks, setTasks }: TasksProps) {
     const handleAddTask = (e?: React.FormEvent) => {
         if (e) e.preventDefault();
         if (!title.trim()) return;
-        
+
         const newTask: Task = {
             id: Date.now(),
             title: title.trim(),
@@ -38,20 +38,20 @@ export default function Tasks({ tasks, setTasks }: TasksProps) {
     }
 
     return (
-        <section className="p-6 md:p-10 max-w-7xl mx-auto min-h-screen">
+        <section className="p-6 md:p-10 max-w-7xl mx-auto min-h-screen dark:bg-slate-950 transition-colors">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                 <div>
-                    <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+                    <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
                         Tasks
                     </h1>
-                    <p className="mt-2 text-lg text-slate-600">
+                    <p className="mt-2 text-lg text-slate-600 dark:text-slate-400">
                         Manage your tasks and stay organized.
                     </p>
                 </div>
 
                 <button
                     onClick={handleShowForm}
-                    className={`inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 font-semibold text-white transition-all duration-300 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 ${showForm ? 'bg-slate-800 hover:bg-slate-700 focus:ring-slate-900' : 'bg-blue-600 hover:bg-blue-700 hover:-translate-y-0.5 focus:ring-blue-500'}`}
+                    className={`inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 font-semibold text-white transition-all duration-300 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 ${showForm ? 'bg-slate-800 dark:bg-slate-700 hover:bg-slate-700 dark:hover:bg-slate-600 focus:ring-slate-900 dark:focus:ring-slate-600 dark:focus:ring-offset-slate-950' : 'bg-blue-600 dark:bg-blue-700 hover:bg-blue-700 dark:hover:bg-blue-600 hover:-translate-y-0.5 focus:ring-blue-500 dark:focus:ring-blue-600 dark:focus:ring-offset-slate-950'}`}
                 >
                     {showForm ? (
                         <>
@@ -66,34 +66,34 @@ export default function Tasks({ tasks, setTasks }: TasksProps) {
                     )}
                 </button>
             </div>
-            
+
             {showForm && (
                 <div className="mt-8 animate-in fade-in slide-in-from-top-4 duration-300">
-                    <form 
+                    <form
                         onSubmit={handleAddTask}
-                        className="rounded-2xl border border-slate-200 bg-white/50 p-6 backdrop-blur-sm shadow-sm md:p-8"
+                        className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/50 dark:bg-slate-900/50 p-6 backdrop-blur-sm shadow-sm dark:shadow-lg md:p-8 transition-colors"
                     >
-                        <h2 className="text-xl font-bold text-slate-900 mb-6">
+                        <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-6">
                             Create a New Task
                         </h2>
-                        
+
                         <div className="flex flex-col gap-4 sm:flex-row sm:items-end">
                             <div className="flex-1 space-y-2">
-                                <label htmlFor="task-title" className="text-sm font-medium text-slate-700">Task Title</label>
-                                <input 
+                                <label htmlFor="task-title" className="text-sm font-medium text-slate-700 dark:text-slate-300">Task Title</label>
+                                <input
                                     id="task-title"
-                                    type='text' 
-                                    value={title} 
-                                    onChange={(event) => setTitle(event.target.value)} 
-                                    placeholder="e.g. Redesign the landing page" 
-                                    className='w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all' 
+                                    type='text'
+                                    value={title}
+                                    onChange={(event) => setTitle(event.target.value)}
+                                    placeholder="e.g. Redesign the landing page"
+                                    className='w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 px-4 py-3 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 dark:focus:ring-blue-400/20 transition-all'
                                     autoFocus
                                 />
                             </div>
-                            <button 
+                            <button
                                 type="submit"
                                 disabled={!title.trim()}
-                                className='w-full sm:w-auto rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white shadow-md transition-all duration-200 hover:bg-blue-700 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed'
+                                className='w-full sm:w-auto rounded-xl bg-blue-600 dark:bg-blue-700 px-6 py-3 font-semibold text-white shadow-md transition-all duration-200 hover:bg-blue-700 dark:hover:bg-blue-600 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed'
                             >
                                 Save Task
                             </button>
@@ -101,27 +101,27 @@ export default function Tasks({ tasks, setTasks }: TasksProps) {
                     </form>
                 </div>
             )}
-            
+
             <div className="mt-8">
                 {tasks.length === 0 ? (
-                    <div className="flex flex-col items-center justify-center rounded-3xl border-2 border-dashed border-slate-200 bg-slate-50 py-24 text-center">
-                        <div className="rounded-full bg-blue-50 p-4 mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-500"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    <div className="flex flex-col items-center justify-center rounded-3xl border-2 border-dashed border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/50 py-24 text-center transition-colors">
+                        <div className="rounded-full bg-blue-50 dark:bg-blue-900/30 p-4 mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-500 dark:text-blue-400"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
                         </div>
-                        <h3 className="text-xl font-bold text-slate-900">No tasks yet</h3>
-                        <p className="mt-2 text-slate-500 max-w-sm">Get started by creating a new task. Your tasks will appear here.</p>
-                        <button onClick={handleShowForm} className="mt-6 font-semibold text-blue-600 hover:text-blue-700">
+                        <h3 className="text-xl font-bold text-slate-900 dark:text-white">No tasks yet</h3>
+                        <p className="mt-2 text-slate-500 dark:text-slate-400 max-w-sm">Get started by creating a new task. Your tasks will appear here.</p>
+                        <button onClick={handleShowForm} className="mt-6 font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300">
                             Create your first task &rarr;
                         </button>
                     </div>
                 ) : (
                     <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                         {tasks.map((task) => (
-                            <TaskCard 
-                                key={task.id} 
-                                task={task} 
-                                onComplete={handleCompleteTask} 
-                                onDelete={handleDeleteTask} 
+                            <TaskCard
+                                key={task.id}
+                                task={task}
+                                onComplete={handleCompleteTask}
+                                onDelete={handleDeleteTask}
                             />
                         ))}
                     </div>

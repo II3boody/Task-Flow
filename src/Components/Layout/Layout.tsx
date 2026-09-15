@@ -10,7 +10,7 @@ export default function Layout() {
 
     return (
         <>
-            <div className='min-h-screen bg-slate-50 text-slate-900 font-sans flex flex-col'>
+            <div className='min-h-screen bg-slate-50 text-slate-900 font-sans flex flex-col dark:bg-slate-950 dark:text-slate-50 transition-colors'>
                 <NavBar onToggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
                 <div className='flex flex-1 overflow-hidden'>
                     <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />

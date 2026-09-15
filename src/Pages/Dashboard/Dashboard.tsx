@@ -42,12 +42,12 @@ export default function Dashboard({ tasks }: DashboardProps) {
     ]
 
     return (
-        <section className="p-6 md:p-10">
+        <section className="p-6 md:p-10 dark:bg-slate-950 transition-colors">
             <div>
-                <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+                <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
                     Dashboard
                 </h1>
-                <p className="mt-2 text-lg text-slate-600">
+                <p className="mt-2 text-lg text-slate-600 dark:text-slate-400">
                     Welcome back! Here's an overview of your tasks.
                 </p>
             </div>
@@ -56,14 +56,14 @@ export default function Dashboard({ tasks }: DashboardProps) {
                 {stats.map((stat) => (
                     <div
                         key={stat.title}
-                        className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                        className="group relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 shadow-sm dark:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:hover:shadow-xl"
                     >
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-sm font-semibold uppercase tracking-wider text-slate-500">
+                                <p className="text-sm font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
                                     {stat.title}
                                 </p>
-                                <p className="mt-2 text-4xl font-extrabold text-slate-900">
+                                <p className="mt-2 text-4xl font-extrabold text-slate-900 dark:text-white">
                                     {stat.value}
                                 </p>
                             </div>
@@ -71,8 +71,8 @@ export default function Dashboard({ tasks }: DashboardProps) {
                                 {stat.icon}
                             </div>
                         </div>
-                        <div className="mt-6 flex items-center gap-2 text-sm text-slate-500">
-                            <span className="flex h-1.5 w-1.5 rounded-full bg-slate-400"></span>
+                        <div className="mt-6 flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
+                            <span className="flex h-1.5 w-1.5 rounded-full bg-slate-400 dark:bg-slate-600"></span>
                             {stat.description}
                         </div>
 
@@ -82,22 +82,22 @@ export default function Dashboard({ tasks }: DashboardProps) {
                 ))}
             </div>
 
-            <div className="mt-12 rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+            <div className="mt-12 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-8 shadow-sm dark:shadow-lg transition-colors">
                 <div className="flex items-center justify-between mb-4">
-                    <h2 className="text-lg font-bold text-slate-900">Task Progress</h2>
-                    <span className="text-2xl font-bold text-blue-600">
+                    <h2 className="text-lg font-bold text-slate-900 dark:text-white">Task Progress</h2>
+                    <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">
                         {totalTasks > 0 ? Math.round((completedTasks / totalTasks) * 100) : 0}%
                     </span>
                 </div>
 
-                <div className="relative h-4 w-full overflow-hidden rounded-full bg-slate-100">
+                <div className="relative h-4 w-full overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800">
                     <div
                         className="absolute left-0 top-0 h-full bg-gradient-to-r from-blue-500 to-indigo-500 transition-all duration-1000 ease-out"
                         style={{ width: `${totalTasks > 0 ? Math.round((completedTasks / totalTasks) * 100) : 0}%` }}
                     ></div>
                 </div>
 
-                <p className="mt-4 text-sm text-slate-500">
+                <p className="mt-4 text-sm text-slate-500 dark:text-slate-400">
                     {totalTasks === 0
                         ? "You don't have any tasks yet. Create some to see your progress!"
                         : completedTasks === totalTasks
