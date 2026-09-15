@@ -13,17 +13,17 @@ export default function TaskCard({ task, onComplete, onDelete }: TaskCardProps) 
 
     return (
         <div className={`group relative flex flex-col justify-between overflow-hidden rounded-2xl border bg-white p-6 transition-all duration-300 hover:shadow-xl ${isCompleted ? 'border-green-200 bg-green-50/30' : 'border-slate-200 hover:-translate-y-1 hover:border-blue-300'}`}>
-            
+
             {/* Status Indicator Bar */}
             <div className={`absolute top-0 left-0 h-1 w-full transition-colors duration-300 ${isCompleted ? 'bg-green-500' : 'bg-blue-500 group-hover:bg-blue-600'}`}></div>
-            
+
             <div>
                 <div className="flex items-center justify-between mb-4">
                     <span className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold ${isCompleted ? 'bg-green-100 text-green-700' : 'bg-amber-100 text-amber-700'}`}>
                         {isCompleted ? 'Completed' : 'Pending'}
                     </span>
-                    <button 
-                        onClick={() => onDelete(task.id)} 
+                    <button
+                        onClick={() => onDelete(task.id)}
                         className="text-slate-400 opacity-0 transition-all duration-200 hover:text-red-600 group-hover:opacity-100 focus:opacity-100"
                         title="Delete task"
                     >
@@ -34,7 +34,7 @@ export default function TaskCard({ task, onComplete, onDelete }: TaskCardProps) 
                     {task.title}
                 </h3>
             </div>
-            
+
             <div className="mt-6 flex items-center">
                 {!isCompleted && (
                     <button

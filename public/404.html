@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        const path = window.location.pathname;
+        const projectName = '/Task-Flow/';
+
+        if (!path.includes(projectName)) {
+            window.location.href = projectName;
+        } else {
+            const pathWithoutProject = path.replace(projectName, '/');
+            const queryString = window.location.search;
+            const hash = window.location.hash;
+            window.location.href = projectName + '#' + pathWithoutProject + queryString + hash;
+        }
+    </script>
+</head>
+
+<body>
+    <p>Redirecting...</p>
+</body>
+
+</html>

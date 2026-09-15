@@ -2,7 +2,7 @@ import { Link, useLocation } from 'react-router-dom'
 
 export default function NavBar() {
     const location = useLocation();
-    
+
     // Only show "Add Task" button if we are not on the tasks page
     const showAddTask = location.pathname !== '/tasks';
 
@@ -15,7 +15,7 @@ export default function NavBar() {
                     </div>
                     <span className='text-xl font-bold tracking-tight bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent'>TaskFlow</span>
                 </Link>
-                
+
                 {showAddTask && (
                     <Link to='/tasks' className='inline-flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600'>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
