@@ -1,0 +1,28 @@
+# Prettier ignore file
+
+node_modules/
+dist/
+build/
+.next/
+out/
+.turbo/
+
+# Dependencies
+*.lock
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Test coverage
+coverage/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db

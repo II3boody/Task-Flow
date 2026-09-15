@@ -1,8 +1,32 @@
 {
-  "name": "task-dashboard",
-  "private": true,
-  "version": "0.0.0",
+  "name": "task-flow",
+  "description": "A modern, responsive task management dashboard built with React, TypeScript and Tailwind CSS",
+  "version": "1.0.0",
   "type": "module",
+  "private": false,
+  "author": {
+    "name": "II3boody",
+    "url": "https://github.com/II3boody"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/II3boody/Task-Flow.git"
+  },
+  "bugs": {
+    "url": "https://github.com/II3boody/Task-Flow/issues"
+  },
+  "homepage": "https://github.com/II3boody/Task-Flow#readme",
+  "keywords": [
+    "task",
+    "todo",
+    "management",
+    "dashboard",
+    "react",
+    "typescript",
+    "tailwind",
+    "vite"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
