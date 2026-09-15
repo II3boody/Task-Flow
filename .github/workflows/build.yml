@@ -36,6 +36,9 @@ jobs:
     - name: Install dependencies
       run: npm ci --verbose 2>&1 | tail -20
 
+    - name: Check for conflicting packages
+      run: npm ls 2>&1 | grep -E "ERR|unmet" || echo "No conflicts found"
+
     - name: Check TypeScript compilation
       run: npx tsc --noEmit
 
