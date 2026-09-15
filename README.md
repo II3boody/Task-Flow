@@ -1,4 +1,4 @@
-# 📋 Task Flow - Professional Task Management Dashboard
+# Task Flow - Professional Task Management Dashboard
 
 <div align="center">
 
@@ -9,47 +9,47 @@
 
 ### A Modern, Responsive Task Management Application Built with React, TypeScript & Tailwind CSS
 
-[Features](#-features) • [Getting Started](#-getting-started) • [Usage](#-usage) • [Tech Stack](#-tech-stack) • [Contributing](#-contributing)
+[Features](#features) • [Getting Started](#getting-started) • [Usage](#usage) • [Tech Stack](#tech-stack) • [Contributing](#contributing)
 
 </div>
 
 ---
 
-## 🎯 About The Project
+## About The Project
 
 **Task Flow** is a professional-grade task management dashboard designed to help users organize, track, and manage their daily tasks efficiently. Built with modern web technologies, it provides an intuitive interface with real-time updates and persistent storage.
 
 ### Key Highlights
-- ✅ **Fully Responsive Design** - Works seamlessly on desktop, tablet, and mobile devices
-- 🎨 **Modern UI/UX** - Built with Tailwind CSS for a professional appearance
-- 💾 **Local Storage** - Tasks persist automatically in browser storage
-- 🚀 **Lightning Fast** - Powered by Vite for optimal performance
-- 🔐 **Type Safe** - Full TypeScript support for robust code
-- 📱 **Mobile Optimized** - Touch-friendly interface for all devices
+- **Fully Responsive Design** - Works seamlessly on desktop, tablet, and mobile devices
+- **Modern UI/UX** - Built with Tailwind CSS for a professional appearance
+- **Local Storage** - Tasks persist automatically in browser storage
+- **Lightning Fast** - Powered by Vite for optimal performance
+- **Type Safe** - Full TypeScript support for robust code
+- **Mobile Optimized** - Touch-friendly interface for all devices
 
 ---
 
-## ✨ Features
+## Features
 
 ### Core Features
-- 📝 **Create Tasks** - Add new tasks with ease
-- ✏️ **Edit Tasks** - Modify existing tasks
-- ✓ **Mark Complete** - Track task completion status
-- 🗑️ **Delete Tasks** - Remove completed or unwanted tasks
-- 📊 **Dashboard Analytics** - View task statistics and overview
-- 🏠 **Home Page** - Beautiful landing page
-- 📱 **Responsive Navigation** - Smooth navigation between pages
+- **Create Tasks** - Add new tasks with ease
+- **Edit Tasks** - Modify existing tasks
+- **Mark Complete** - Track task completion status
+- **Delete Tasks** - Remove completed or unwanted tasks
+- **Dashboard Analytics** - View task statistics and overview
+- **Home Page** - Beautiful landing page
+- **Responsive Navigation** - Smooth navigation between pages
 
 ### Additional Features
-- 💾 **Auto-Save** - Tasks automatically saved to local storage
-- 🎨 **Beautiful UI** - Modern design with Tailwind CSS
-- 🚀 **Fast Performance** - Optimized with Vite
-- 📦 **Component Based** - Modular, reusable components
-- 🧭 **Client-Side Routing** - Smooth page transitions with React Router
+- **Auto-Save** - Tasks automatically saved to local storage
+- **Beautiful UI** - Modern design with Tailwind CSS
+- **Fast Performance** - Optimized with Vite
+- **Component Based** - Modular, reusable components
+- **Client-Side Routing** - Smooth page transitions with React Router
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Node.js (v14.0 or higher)
@@ -97,7 +97,7 @@ npm run preview
 
 ---
 
-## 📖 Usage
+## Usage
 
 ### Creating a Task
 1. Navigate to the **Tasks** page
@@ -117,7 +117,7 @@ npm run preview
 
 ---
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 task-dashboard/
@@ -153,7 +153,7 @@ task-dashboard/
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend Framework
 - **React 19.2** - UI library
@@ -178,7 +178,7 @@ task-dashboard/
 
 ---
 
-## 📋 Available Scripts
+## Available Scripts
 
 | Command | Description |
 |---------|-------------|
@@ -189,7 +189,7 @@ task-dashboard/
 
 ---
 
-## 🎨 Styling & Design System
+## Styling & Design System
 
 This project uses **Tailwind CSS** for styling, providing:
 - Consistent color palette
@@ -199,7 +199,7 @@ This project uses **Tailwind CSS** for styling, providing:
 
 ---
 
-## 🔒 Data Persistence
+## Data Persistence
 
 Tasks are automatically saved to browser's **LocalStorage**:
 - All tasks persist between sessions
@@ -208,7 +208,7 @@ Tasks are automatically saved to browser's **LocalStorage**:
 
 ---
 
-## 🐛 Known Issues & Future Improvements
+## Known Issues & Future Improvements
 
 ### Planned Features
 - [ ] Backend API integration
@@ -224,7 +224,7 @@ Tasks are automatically saved to browser's **LocalStorage**:
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome and greatly appreciated! 
 
@@ -269,7 +269,7 @@ Contributions are welcome and greatly appreciated!
 
 ---
 
-## 📝 License
+## License
 
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
@@ -277,7 +277,7 @@ You are free to use, modify, and distribute this project.
 
 ---
 
-## 👤 Author
+## Author
 
 **II3boody**
 
@@ -286,19 +286,19 @@ You are free to use, modify, and distribute this project.
 
 ---
 
-## ⭐ Support
+## Support
 
 If you find this project helpful, please consider:
 
-- ⭐ **Starring the repository** on GitHub
-- 🍴 **Forking the project** for your own use
-- 📢 **Sharing** with your network
-- 💬 **Providing feedback** and suggestions
-- 🐛 **Reporting bugs** if you find any
+- **Starring the repository** on GitHub
+- **Forking the project** for your own use
+- **Sharing** with your network
+- **Providing feedback** and suggestions
+- **Reporting bugs** if you find any
 
 ---
 
-## 📞 Contact & Feedback
+## Contact & Feedback
 
 Feel free to reach out with any questions or feedback:
 
@@ -307,7 +307,7 @@ Feel free to reach out with any questions or feedback:
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - [React Documentation](https://react.dev)
 - [Tailwind CSS](https://tailwindcss.com)
@@ -318,9 +318,9 @@ Feel free to reach out with any questions or feedback:
 
 <div align="center">
 
-### Made with ❤️ by II3boody
+### Made with passion by II3boody
 
-**Star the project if you find it useful!** ⭐
+**Star the project if you find it useful!**
 
 </div>
 
