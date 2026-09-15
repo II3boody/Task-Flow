@@ -1,4 +1,3 @@
-import React from 'react'
 import NavBar from '../NavBar/Navbar'
 import Footer from '../Footer/Footer'
 import Sidebar from '../Sidebar/Sidebar'

@@ -4,7 +4,7 @@ import Layout from "./Components/Layout/Layout"
 import Dashboard from "./Pages/Dashboard/Dashboard"
 import Tasks from "./Pages/Tasks/Tasks"
 import Error from "./Pages/Error/Error"
-import Home from "./Pages/Home/Home"
+import Home from "./Pages/Home/Home.tsx"
 import type { Task } from "./Types/Task/Task"
 
 export default function App() {
