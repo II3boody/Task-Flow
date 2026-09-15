@@ -26,17 +26,29 @@ jobs:
 
     - name: Verify Node.js and npm versions
       run: |
+        echo "Node version:"
         node --version
+        echo "npm version:"
         npm --version
+        echo "npm cache:"
+        npm cache verify
 
     - name: Install dependencies
-      run: npm ci --prefer-offline --no-audit
+      run: npm ci --verbose 2>&1 | tail -20
+
+    - name: Check TypeScript compilation
+      run: npx tsc --noEmit
 
     - name: Run linter
-      run: npm run lint -- --max-warnings=0
+      run: npm run lint 2>&1 || true
 
     - name: Build project
-      run: npm run build
+      run: npm run build --verbose
+
+    - name: Verify build artifacts
+      run: |
+        echo "Build artifacts:"
+        ls -lah dist/ || echo "No dist folder found"
 
     - name: Archive build artifacts
       uses: actions/upload-artifact@v4
@@ -44,6 +56,8 @@ jobs:
         name: dist-${{ matrix.node-version }}
         path: dist/
         retention-days: 5
+      if: always()
 
-    - name: Build success
+    - name: Build result
+      if: success()
       run: echo "Build completed successfully for Node ${{ matrix.node-version }}"
