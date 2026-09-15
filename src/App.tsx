@@ -21,18 +21,35 @@ export default function App() {
     localStorage.setItem("tasks", JSON.stringify(tasks))
   }, [tasks])
 
-  const router = createBrowserRouter([
+  const router = createBrowserRouter(
+    [
+      {
+        path: "/",
+        element: <Layout />,
+        children: [
+          {
+            index: true,
+            element: <Home />,
+          },
+          {
+            path: "dashboard",
+            element: <Dashboard tasks={tasks} />,
+          },
+          {
+            path: "tasks",
+            element: <Tasks tasks={tasks} setTasks={setTasks} />,
+          },
+          {
+            path: "*",
+            element: <Error />,
+          },
+        ],
+      },
+    ],
     {
-      path: '/', element: <Layout />, children: [
-        {
-          index: true, element: <Home />,
-        },
-        { path: "/dashboard", element: <Dashboard tasks={tasks} /> },
-        { path: '/tasks', element: <Tasks tasks={tasks} setTasks={setTasks} /> },
-        { path: '*', element: <Error /> }
-      ]
+      basename: "/Task-Flow",
     }
-  ])
+  )
 
 
   return (
