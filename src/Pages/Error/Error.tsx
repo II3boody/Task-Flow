@@ -13,12 +13,12 @@ export default function Error() {
                 </p>
                 <div className="mt-10 flex items-center justify-center gap-x-6">
                     <Link
-                        to="/"
+                        to="Task-Dashboard"
                         className="rounded-xl bg-blue-600 dark:bg-blue-700 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 dark:hover:bg-blue-600 hover:shadow-md hover:-translate-y-0.5 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 dark:focus-visible:outline-blue-400 dark:focus-visible:outline-offset-slate-950"
                     >
                         Go back home
                     </Link>
-                    <a href="#" className="text-sm font-semibold text-slate-900 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                    <a href="https://ii3boody.github.io/Contact/" className="text-sm font-semibold text-slate-900 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                         Contact support <span aria-hidden="true">&rarr;</span>
                     </a>
                 </div>
